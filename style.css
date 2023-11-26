@@ -1,0 +1,129 @@
+*{
+    color: black;
+}
+
+.body {
+    background-image: url(gambar.png);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.p {
+    max-width: 1200px;
+}
+
+.p .row{
+    background-color: bisque;
+    border-radius: 10%;
+    max-width: 500px;
+}
+
+.row {
+    background-color: bisque;
+}
+
+.name {
+    text-shadow: 3px 3px 1px black;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    text-align: center;
+}
+
+.box {
+    position: relative;
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    margin: 40px; 
+    border-radius: 15%;
+    transition: .5s;
+    box-shadow: 0 0 20px gray;
+    
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.number {
+    background-color: black;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 15%;
+}
+
+.nomor {
+    
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2)) ;
+    animation: batu 1s ease-in-out infinite;
+}
+
+.nomor span {
+    animation-delay: calc(0.1s * var(--i));
+    color: white;
+}
+
+@keyframes batu {
+    0%{
+        transform: translateY(0px);
+    }20%{
+        transform: translateY(-25px);
+    }75%,100%{
+        transform: translateY(0px);
+    }
+}
+
+/* wavy text */
+.wavy {
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2)) ;
+    text-align: center;
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+    }20%{
+        transform: translateY(-40px);
+    }40%,100%{
+        transform: translateY(0px);
+    }
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom i {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    transition: .5s;
+    
+}
+
+.bottom a i:hover {
+    width: 100px;
+}
